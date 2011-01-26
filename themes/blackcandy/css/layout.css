@@ -535,23 +535,29 @@ p#Remember label {
 /*---------------------------------------------------*/
 /*css for self help tools pages*/	
 	
-#wrapper {
-	padding-left: 200px;
-	padding: 25px;
-	width: 500px;
-	
+#selfhelpwrapper {
+  float:right;
+  width:500px;
+  }
+#selfhelpblock {
+    padding-left:5px;
+    padding-right:5px;
+    }
+#selfhelphorrule {
+    width:500px;
+    }
+#selfhelpfeature {
+    position:left;
+    padding:5px;
+    width:350px;
+  }
+#selfhelptitle {
+  float:left;
+  padding:2px;
+  width:350px;
 }
-
-#mainp {
-	padding: 25px;
-}
-
-#linkp {
-	width: 60%;
-}
-
-#button {
-	float: right;
-	position:relative;
-	top:-24px;
+#selfhelpbutton {
+  padding-top:70px;
+  float:right;
+  width:100px;
 }
