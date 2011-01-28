@@ -4,7 +4,7 @@ global $project;
 $project = 'mysite';
 
 global $database;
-$database = 'SS_mysite';
+$database = 'Self-Help-Tools';
 
 require_once('conf/ConfigureFromEnv.php');
 
@@ -19,3 +19,7 @@ i18n::set_locale('en_US');
 
 // enable nested URLs for this site (e.g. page/sub-page/)
 SiteTree::enable_nested_urls();
+
+FulltextSearchable::enable();
+
+HtmlEditorConfig::get('cms')->removeButtons('tablecontrols');

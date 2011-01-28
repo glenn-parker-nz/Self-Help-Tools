@@ -36,9 +36,6 @@ function init() {
      		return $tools;
      	}
      	return false;
-	
-	
-	
 	}
 }
 ?>

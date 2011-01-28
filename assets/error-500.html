@@ -2,7 +2,7 @@
 
 <html lang="en-US">
   <head>
-		<base href="http://sid-silver/sandboxinterns/pargle/"><!--[if lte IE 6]></base><![endif]-->
+		<base href="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/"><!--[if lte IE 6]></base><![endif]-->
 		<title>Server error &raquo; Your Site Name</title>
 		<meta name="generator" content="SilverStripe - http://silverstripe.org" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -18,15 +18,26 @@
 			 @import url(themes/blackcandy/css/ie6.css);
 			</style> 
 		<![endif]-->
-	<link rel="stylesheet" type="text/css" href="http://sid-silver/sandboxinterns/pargle/themes/blackcandy/css/layout.css?m=1271032378" />
-<link rel="stylesheet" type="text/css" href="http://sid-silver/sandboxinterns/pargle/themes/blackcandy/css/typography.css?m=1241147393" />
-<link rel="stylesheet" type="text/css" href="http://sid-silver/sandboxinterns/pargle/themes/blackcandy/css/form.css?m=1278978109" />
+	<link rel="stylesheet" type="text/css" href="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/themes/blackcandy/css/layout.css?m=1296178454" />
+<link rel="stylesheet" type="text/css" href="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/themes/blackcandy/css/typography.css?m=1241147393" />
+<link rel="stylesheet" type="text/css" href="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/themes/blackcandy/css/form.css?m=1278978109" />
 </head>
 <body>
 	<div id="BgContainer">
 		<div id="Container">
 			<div id="Header">
-				
+				<form  id="SearchForm_SearchForm" action="/sandboxinterns/pargle/SelfHelpTools/server-error/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="" /></div></div>
+		
+		
+			<input class="action " id="SearchForm_SearchForm_action_results" type="submit" name="action_results" value="Go" title="Go" />
+		
+	</fieldset>
+</form>
+
 		   		<h1>Your Site Name</h1>
 		    	<p>your tagline here</p>
 			</div>
@@ -34,11 +45,13 @@
 			<div id="Navigation">
 				<ul>
  		  
-  		<li><a href="/sandboxinterns/pargle/" title="Go to the Home page" class="link"><span>Home</span></a></li>
+  		<li><a href="/sandboxinterns/pargle/SelfHelpTools/" title="Go to the Home page" class="link"><span>Home</span></a></li>
    		  
-  		<li><a href="/sandboxinterns/pargle/about-us/" title="Go to the About Us page" class="link"><span>About Us</span></a></li>
+  		<li><a href="/sandboxinterns/pargle/SelfHelpTools/about-us/" title="Go to the About Us page" class="link"><span>About Us</span></a></li>
    		  
-  		<li><a href="/sandboxinterns/pargle/contact-us/" title="Go to the Contact Us page" class="link"><span>Contact Us</span></a></li>
+  		<li><a href="/sandboxinterns/pargle/SelfHelpTools/contact-us/" title="Go to the Contact Us page" class="link"><span>Contact Us</span></a></li>
+   		  
+  		<li><a href="/sandboxinterns/pargle/SelfHelpTools/new-studenttoolsholder/" title="Go to the New StudentToolsHolder page" class="link"><span>New StudentToolsHolder</span></a></li>
    	
  </ul>
 		  	</div>
@@ -70,5 +83,61 @@
 
 		</div> 
 	</div>
-</body>
+<script type="text/javascript" src="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/sapphire/thirdparty/prototype/prototype.js?m=1268274567"></script><script type="text/javascript" src="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/sapphire/thirdparty/behaviour/behaviour.js?m=1267739533"></script><script type="text/javascript" src="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/sapphire/javascript/prototype_improvements.js?m=1281399261"></script><script type="text/javascript" src="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/sapphire/javascript/i18n.js?m=1245280480"></script><script type="text/javascript" src="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/sapphire/javascript/lang/en_US.js?m=1242680243"></script><script type="text/javascript" src="http://sid-silver/sandboxinterns/pargle/SelfHelpTools/sapphire/javascript/Validator.js?m=1286826382"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			if(error && !fromAnOnBlur) focusOnFirstErroredField();
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SearchForm_SearchForm textarea' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this);
+			}
+		}
+	},
+	'#SearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script></body>
 </html>
