@@ -4,7 +4,6 @@ class StudentStudyCalculator extends Page{
 
 
 	public static $db = array(
-  	"ButtonLink" => "HTMLText",
 	"ToolExternalDescription" => 'Varchar'
 	);
 
@@ -33,7 +32,11 @@ class StudentStudyCalculator extends Page{
 
 		return $fields;
 	}
-
 }
+
+class StudentStudyCalculator_Controller extends Page_Controller {
+     
+}
+
 
 ?>
