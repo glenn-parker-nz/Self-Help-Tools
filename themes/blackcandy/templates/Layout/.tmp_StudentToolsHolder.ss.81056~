@@ -1,0 +1,31 @@
+<div class="typography">
+	<div id="selfhelpwrapper">
+		<div class="selfhelpblock">
+			<h1>Open Polytechnic Self Help Tools</h1>
+			<p>$Content</p>
+		</div>
+	
+		<% control ContainedHelpTools %>
+			<div class="selfhelpblock">
+				
+				<div class="selfhelpfeature">
+					
+					<div class="selfhelptitle">
+						<h2>$Title</h2>
+					</div>
+					<div class="selfhelpcontent">$Content</div>	
+					<div class="selfhelpbutton">
+						<a><img class="left" src="assets/Uploads/button1_2.png" width="94" 
+						 height="24" /></a>
+					</div>
+				
+				</div>
+		
+				<div class="selfhelphorrule">
+					<hr />
+				</div>
+				
+			</div>
+		<% end_control %>
+	</div>
+</div>
