@@ -528,36 +528,3 @@ p#Remember label {
 				color: #fff;
 				text-decoration: underline;
 			}
-
-			
-			
-			
-/*---------------------------------------------------*/
-/*css for self help tools pages*/	
-	
-#selfhelpwrapper {
-  float:right;
-  width:500px;
-  }
-#selfhelpblock {
-    padding-left:5px;
-    padding-right:5px;
-    }
-#selfhelphorrule {
-    width:500px;
-    }
-#selfhelpfeature {
-    position:left;
-    padding:5px;
-    width:350px;
-  }
-#selfhelptitle {
-  float:left;
-  padding:2px;
-  width:350px;
-}
-#selfhelpbutton {
-  padding-top:70px;
-  float:right;
-  width:100px;
-}
