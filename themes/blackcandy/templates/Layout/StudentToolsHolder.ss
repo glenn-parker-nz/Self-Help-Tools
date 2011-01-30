@@ -15,8 +15,8 @@
 				<div class="content">$Content</div>	
 				
 				<div class="button">
-					<a><img class="left" src="assets/Uploads/button1_2.png" width="94" 
-					 height="24" /></a>
+					 <a href="$Link"><img class="left" src="$Image.URL" 
+					  alt="Button Image" /></a>
 				</div>
 			</div>
 		<% end_control %>	
