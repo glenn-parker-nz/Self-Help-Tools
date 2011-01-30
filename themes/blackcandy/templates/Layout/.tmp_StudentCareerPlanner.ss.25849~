@@ -1,0 +1,1 @@
+<a href="$LinkedPage.Link"><img src="$Image.URL" /></a>
