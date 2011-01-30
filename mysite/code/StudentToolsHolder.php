@@ -10,16 +10,6 @@ class StudentToolsHolder extends Page
 
 class StudentToolsHolder_Controller extends Page_Controller 
 {
-	
-function init() {
-			parent::init();
-	
-			// Note: you should use SS template require tags inside your templates 
-			// instead of putting Requirements calls here.  However these are 
-			// included so that our older themes still work
-			Requirements::themedCSS('StudentToolsHolder'); 
-			Requirements::themedCSS('typography'); 
-		}
 	/**
 	 * Retrieves all the contained Student help tools
 	 * @return the current set of tools
