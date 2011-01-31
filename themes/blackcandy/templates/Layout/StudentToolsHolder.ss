@@ -12,7 +12,7 @@
 		<% control ContainedHelpTools %>				
 			<div class="feature">
 				<h3>$Title</h3>
-				<div class="content">$Content</div>	
+				<div class="content">$ToolExternalDescription</div>	
 				
 				<div class="button">
 					 <a href="$Link"><img class="left" src="$Image.URL" 
