@@ -6,7 +6,7 @@
 class StudyTool extends Page
 {
 	public static $db = array("ToolExternalDescription" => 'Varchar');
-	static $has_one = array('Image' => 'Image', 'LinkedPage' => 'SiteTree');
+	static $has_one = array('Image' => 'Image');
 	
 	static $default_parent = 'StudentToolsHolder';
 	static $can_be_root = false;
@@ -20,7 +20,6 @@ class StudyTool extends Page
 
 		// add the cms new fields
 		$fields->addFieldToTab("Root.Content.Main", new FieldGroup(
-			new TreeDropdownField("LinkPage", "Page that the image that will be used to link to this page", "SiteTree"),
 			new ImageField("Image", "Choose an image to use as a button link")));
 
 		$fields->addFieldToTab("Root.Content.Main", new TextField("ToolExternalDescription", 
