@@ -5,7 +5,7 @@
 class StudentToolsHolder extends Page
 {     
 	public static $db = array();
-	static $allowed_children = array('StudentStudyCalculator','StudentCareerPlanner'); 
+	static $allowed_children = array('StudyTool'); 
 }
 
 class StudentToolsHolder_Controller extends Page_Controller 
