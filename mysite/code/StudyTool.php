@@ -5,7 +5,7 @@
  */
 class StudyTool extends Page
 {
-	public static $db = array("ToolExternalDescription" => 'Varchar');
+	public static $db = array("ToolExternalDescription" => "HTMLText");
 	static $has_one = array('Image' => 'Image');
 	
 	static $default_parent = 'StudentToolsHolder';
@@ -13,17 +13,16 @@ class StudyTool extends Page
 
 	function getCMSFields() 
 	{
+		
 		// include the standard cms fields
 		SiteTree::disableCMSFieldsExtensions();
 		$fields = parent::getCMSFields();
 		SiteTree::enableCMSFieldsExtensions();
 
 		// add the cms new fields
+		$fields->addFieldToTab("Root.Content.Main", new HtmlEditorField("ToolExternalDescription", "Short description of the study calculator tool for the self-help tools homepage", 10), "Content");
 		$fields->addFieldToTab("Root.Content.Main", new FieldGroup(
-			new ImageField("Image", "Choose an image to use as a button link")));
-
-		$fields->addFieldToTab("Root.Content.Main", new TextField("ToolExternalDescription", 
-			"Short description of the study calculator tool for the self-help tools homepage"),"Content");
+			new ImageField("Image", "Choose an image to use as a button link")), "Content");
  
 		$this->extend('updateCMSFields', $fields);
 
