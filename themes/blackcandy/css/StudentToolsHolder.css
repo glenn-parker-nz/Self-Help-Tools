@@ -1,0 +1,60 @@
+/* ------- Style Sheet for the Self Help Tools Pages ------- */	
+
+#selfhelpblock 
+{
+	width: 500px; 
+	padding: 5px;
+	margin: 0px 0px 0px 135px;
+}
+
+#selfhelpblock #intro 
+{
+    position:left;
+    padding: 5px;
+    width: 480px;
+}
+
+#selfhelpblock  #intro h1
+{
+	font-size: 24px;
+}
+
+#selfhelpblock #holdercontent
+{
+	width:480px;
+}
+
+#selfhelpblock .feature 
+{
+    /*position:left;*/
+    padding: 5px;
+    width: 500px;
+	border-top: 1px solid #000;
+}
+
+#selfhelpblock .feature h3
+{
+	font-size: 18px;
+}
+
+#selfhelpblock .content
+{
+	width:380px;	
+}
+
+#selfhelpblock .button 
+{
+	float: right;
+	position:relative;
+	top:-44px;
+	padding-right:20px;
+  	/*width: 94px;*/
+}
+
+#selfhelpblock .feature h3, #selfhelpblock  #intro h1
+{
+	font-weight: 300;
+	color: #4EA3D7;
+	margin: 0px 0px 10px 0px;
+	width: 350px;
+}
