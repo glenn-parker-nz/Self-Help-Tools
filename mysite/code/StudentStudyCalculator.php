@@ -27,7 +27,7 @@ class StudentStudyCalculator extends Page{
 
 		$fields->addFieldToTab("Root.Content.Main", new TextField("ToolExternalDescription", "Short description of the study calculator tool for the self-help tools homepage"),"Content");
 
-		 
+			
 		$this->extend('updateCMSFields', $fields);
 
 		return $fields;
@@ -35,7 +35,20 @@ class StudentStudyCalculator extends Page{
 }
 
 class StudentStudyCalculator_Controller extends Page_Controller {
-     
+	 
+	function getSubjects() {
+		$sql="SELECT DISTINCT Subject FROM Courses";
+		$result=pg_query($sql);
+
+		$options="";
+
+		while ($row=mysql_fetch_array($result)) {
+
+			$subject=$row["Subject"];
+			$options.="<OPTION VALUE=\"$subject\">";
+		}
+	}
+
 }
 
 
