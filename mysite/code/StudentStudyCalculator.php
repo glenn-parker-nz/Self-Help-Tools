@@ -4,9 +4,9 @@ class StudentStudyCalculator extends StudyTool{
 
 }
 
-class StudentStudyCalculator_Controller extends Page_Controller {
-	 
-	function getSubjects() {
+class StudentStudyCalculator_Controller extends StudyTool_Controller {
+     
+function getSubjects() {
 		$sql="SELECT DISTINCT Subject FROM Courses";
 		$result=pg_query($sql);
 
@@ -18,6 +18,5 @@ class StudentStudyCalculator_Controller extends Page_Controller {
 			$options.="<OPTION VALUE=\"$subject\">";
 		}
 	}
-
 }
 ?>
