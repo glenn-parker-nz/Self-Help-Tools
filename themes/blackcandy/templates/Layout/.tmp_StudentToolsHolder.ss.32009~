@@ -11,7 +11,7 @@
 
 		<% control ContainedHelpTools %>				
 			<div class="feature">
-				<h2>$Title</h2>
+				<h3>$Title</h3>
 				<div class="content">$ToolExternalDescription</div>	
 				
 				<div class="button">
