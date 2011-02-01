@@ -10,16 +10,6 @@
 	
 	<h2>$Title</h2>
 	$Content
-	$InterestPhrase
-	
-	<!--
-	<select name="career" >
-		<option value="Woolworths">Woolworths</option>
-		<option value="New World">New World</option>
-		<option value="Moore Wilson">Moore Wilson</option>
-	</select><br /><br />
-	-->
-	
 	$Form
 	
 	<% if Menu(2) %>
