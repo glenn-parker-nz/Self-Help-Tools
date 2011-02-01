@@ -20,7 +20,7 @@ class StudyTool extends Page
 		SiteTree::enableCMSFieldsExtensions();
 
 		// add the cms new fields
-		$fields->addFieldToTab("Root.Content.Main", new HtmlEditorField("ToolExternalDescription", "Short description of the study calculator tool for the self-help tools homepage", 10), "Content");
+		$fields->addFieldToTab("Root.Content.Main", new HtmlEditorField("ToolExternalDescription", "Short description of the study calculator tool for the self-help tools homepage"), "Content");
 		$fields->addFieldToTab("Root.Content.Main", new FieldGroup(
 			new ImageField("Image", "Choose an image to use as a button link")), "Content");
  

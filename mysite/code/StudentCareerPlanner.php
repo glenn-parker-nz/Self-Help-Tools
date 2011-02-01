@@ -1,29 +1,35 @@
 <?php
-
 class StudentCareerPlanner extends StudyTool
 {
-	public static $db = array("InterestPhrase" => 'Text');
-	static $has_one = array('ShowMeImage' => 'Image');
-
-	function getCMSFields() 
-	{
-		// include the standard cms fields
-		SiteTree::disableCMSFieldsExtensions();
-		$fields = parent::getCMSFields();
-		SiteTree::enableCMSFieldsExtensions();
-
-		// add the cms new fields
-		$fields->addFieldToTab("Root.Content.Main", new TextField("InterestPhrase", "Short phrase 
-			that leads to the drop down box for selecting a career"),"Content");
- 
-		//$this->extend('updateCMSFields', $fields);
-
-		return $fields;
-	} 
+  static $db = array("chooseCareers" => "Enum('Plumber, Designer, Blogger,Teacher')"); 
 }
 
-class StudentCareerPlanner_Controller extends StudyTool_Controller {
-     
+class StudentCareerPlanner_Controller extends StudyTool_Controller 
+{
+  //Define our form function as allowed
+  static $allowed_actions = array(
+    'CareerForm'
+  );
+  
+  //The function which generates our form
+  function CareerForm() 
+  {
+        // Create fields
+      $fields = new FieldSet(
+      new DropdownField('Careers','I\'m interested in becoming a', $this->dbObject('chooseCareers')->enumValues())
+    );
+    
+    
+      // Create action
+      $actions = new FieldSet(
+        new FormAction('SendCareerFormForm', 'Show me!')
+      );
+    
+    // Create action
+    $validator = new RequiredFields('Careers');
+      
+      return new Form($this, 'CareerForm', $fields, $actions, $validator);
+  }     
 }
 
 ?>

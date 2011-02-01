@@ -1,0 +1,46 @@
+/* ------- Style Sheet for the Self Help Tools Pages ------- */	
+
+#Content{
+  
+  padding-right:100px;
+  width: 360px;
+}
+
+.wrapa{
+  
+  width: 320px;
+  
+}
+
+
+.left {
+margin: 0px; 
+width: 190px;
+float: left;
+bottom: -13px;
+position: relative;
+}
+
+#Careers {
+width: 110px;
+text-align: left;
+}
+
+.middleColumn {
+  background-color: #ffffff;
+  margin-left: 175px;
+  width: 200px;
+  height: 50px;
+}
+
+.validationError {
+ 
+}
+
+.Actions #Form_CareerForm_action_SendCareerFormForm {
+  
+left: 270px;  
+bottom: 65px;
+text-align: right;
+position: relative;
+}

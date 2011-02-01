@@ -8,9 +8,12 @@
 	  	<% include BreadCrumbs %>
 	<% end_if %>
 	
-	<h2>$Title</h2>
-	$Content
-	$Form
+		<h2>$Title</h2>
+	
+		$Content
+
+		$Form
+		$calcForm
 	
 	<% if Menu(2) %>
 		</div>

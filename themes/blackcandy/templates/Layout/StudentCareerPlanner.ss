@@ -1,4 +1,5 @@
 <div class="typography">
+<% require themedCSS(StudentCareerPlanner) %>
 	<% if Menu(2) %>
 		<% include SideBar %>
 		<div id="Content">
@@ -10,19 +11,13 @@
 	
 	<h2>$Title</h2>
 	$Content
-	$InterestPhrase
+	$Form 
 	
-	<!--
-	<select name="career" >
-		<option value="Woolworths">Woolworths</option>
-		<option value="New World">New World</option>
-		<option value="Moore Wilson">Moore Wilson</option>
-	</select><br /><br />
-	-->
-	
-	$Form
+ <div class="wrapa">$CareerForm</div>
 	
 	<% if Menu(2) %>
 		</div>
 	<% end_if %>
+	
 </div>
+
