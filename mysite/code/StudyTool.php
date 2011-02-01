@@ -1,7 +1,7 @@
 <?php
 /**
  * An abstraction for Student Help Tools. All Study Tools have an image button that
- * can be used by a Study tool holder inorder to link to it.
+ * can be used by a Study tool holder in order to link to it.
  */
 class StudyTool extends Page
 {
