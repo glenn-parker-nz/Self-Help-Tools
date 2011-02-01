@@ -5,7 +5,7 @@
  */
 class StudyTool extends Page
 {
-	public static $db = array("ToolExternalDescription" => "HTMLText");
+	public static $db = array("ToolExternalDescription" => 'HTMLText');
 	static $has_one = array('Image' => 'Image');
 	
 	static $default_parent = 'StudentToolsHolder';
