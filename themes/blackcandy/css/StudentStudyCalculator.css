@@ -52,6 +52,10 @@ bottom: 192px;
 position: relative;
 }
 
+#Form_calcForm_QualType{
+  width: 137px;
+}
+
 #Form_calcForm_CourseName{
   width: 437px;
 }
