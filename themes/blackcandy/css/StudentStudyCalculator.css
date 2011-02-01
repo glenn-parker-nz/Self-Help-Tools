@@ -1,0 +1,73 @@
+/* ------- Style Sheet for the Self Help Tools Pages ------- */	
+
+#Content{
+  padding-right:100px;
+  width: 410px;
+}
+
+.wrapa{
+  width: 320px;
+  }
+
+.dropdown{
+ width: 330px
+ position: absolute;
+}
+
+.dropdown label { display: none; }
+
+.left {
+margin: 0px; 
+width: 100px;
+float: left;
+bottom: -13px;
+position: relative;
+}
+
+#Subject {
+  width: 110px;
+  text-align: left;
+  position: relative;
+}
+
+#qualtype {
+  width: 110px;
+  text-align: left;
+  left: 150px;
+  bottom: 73px;
+  position: relative;
+}
+
+#qual {
+width: 110px;
+text-align: left;
+left: 300px;
+bottom: 146px;
+position: relative;
+}
+
+#courses {
+width: 450px;
+text-align: left;
+bottom: 192px;
+position: relative;
+}
+
+#Form_calcForm_courses{
+  width: 437px;
+}
+
+.middleColumn {
+  background-color: #ffffff;
+  margin-left: 1px;
+  width: 200px;
+  height: 50px;
+}
+
+.Actions #Form_calcForm_action_SendcalcFormForm {
+  
+left: 445px;  
+bottom: 257px;
+text-align: right;
+position: relative;
+}

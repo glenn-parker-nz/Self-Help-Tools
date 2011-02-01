@@ -1,8 +1,6 @@
 <div class="typography">
-	<% if Menu(2) %>
-		<% include SideBar %>
+<% require themedCSS(StudentStudyCalculator) %>
 		<div id="Content">
-	<% end_if %>
 
 	<% if Level(2) %>
 	  	<% include BreadCrumbs %>
@@ -15,7 +13,4 @@
 		$Form
 		$calcForm
 	
-	<% if Menu(2) %>
-		</div>
-	<% end_if %>
 </div>

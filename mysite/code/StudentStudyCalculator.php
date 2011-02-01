@@ -26,9 +26,15 @@ class StudentStudyCalculator_Controller extends StudyTool_Controller {
 		$fields = new fieldset(
 			new DropdownField('Subject', 'subject', $this->getSubjects(), 'subject'),
 			new DropdownField('qualtype', 'qualtype', $this->getSubjects(), 'qualtype'),
-			new DropdownField('qual', 'qual', $this->getSubjects(), 'qual')
+			new DropdownField('qual', 'qual', $this->getSubjects(), 'qual'),
+			new DropdownField('courses', 'courses', $this->getSubjects(), 'courses')
 		);
-		$actions = new fieldset();
+		
+		// Create action
+      $actions = new FieldSet(
+        new FormAction('SendcalcFormForm', '+')
+      );
+      
 		$validator = new requiredfields('subject');
 		
 		return new Form($this, 'calcForm', $fields, $actions, $validator);
