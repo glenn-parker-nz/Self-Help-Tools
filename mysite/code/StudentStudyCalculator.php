@@ -22,12 +22,57 @@ class StudentStudyCalculator_Controller extends StudyTool_Controller {
 		return $options;
 	}
 	
+	private function getQualType() {
+    $sql="SELECT DISTINCT \"QualType\" FROM \"Courses\"";
+    $result=pg_query($sql);
+
+    $options = array();
+
+    while ($row=pg_fetch_array($result)) {
+
+      $qualtype=$row["QualType"];
+      //$options.="<OPTION VALUE=\"$subject\">";
+      $options[] = $qualtype;
+    }
+    return $options;
+  }
+  
+  private function getQual() {
+    $sql="SELECT DISTINCT \"Qual\" FROM \"Courses\"";
+    $result=pg_query($sql);
+
+    $options = array();
+
+    while ($row=pg_fetch_array($result)) {
+
+      $qual=$row["Qual"];
+      //$options.="<OPTION VALUE=\"$subject\">";
+      $options[] = $qual;
+    }
+    return $options;
+  }
+  
+  private function getCourseName() {
+    $sql="SELECT DISTINCT \"CourseName\" FROM \"Courses\"";
+    $result=pg_query($sql);
+
+    $options = array();
+
+    while ($row=pg_fetch_array($result)) {
+
+      $coursename=$row["CourseName"];
+      //$options.="<OPTION VALUE=\"$subject\">";
+      $options[] = $coursename;
+    }
+    return $options;
+  }
+	
 	function calcForm() {
 		$fields = new fieldset(
 			new DropdownField('Subject', 'subject', $this->getSubjects(), 'subject'),
-			new DropdownField('qualtype', 'qualtype', $this->getSubjects(), 'qualtype'),
-			new DropdownField('qual', 'qual', $this->getSubjects(), 'qual'),
-			new DropdownField('courses', 'courses', $this->getSubjects(), 'courses')
+			new DropdownField('QualType', 'qualtype', $this->getQualType(), 'qualtype'),
+			new DropdownField('Qual', 'qual', $this->getQual(), 'qual'),
+			new DropdownField('CourseName', 'coursename', $this->getCourseName(), 'coursename')
 		);
 		
 		// Create action

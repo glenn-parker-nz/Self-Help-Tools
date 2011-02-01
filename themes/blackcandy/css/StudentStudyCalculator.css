@@ -18,7 +18,6 @@
 
 .left {
 margin: 0px; 
-width: 100px;
 float: left;
 bottom: -13px;
 position: relative;
@@ -30,15 +29,15 @@ position: relative;
   position: relative;
 }
 
-#qualtype {
-  width: 110px;
-  text-align: left;
-  left: 150px;
-  bottom: 73px;
-  position: relative;
+#QualType {
+width: 110px;
+text-align: left;
+position: relative;
+left: 150px;
+bottom: 73px;  
 }
 
-#qual {
+#Qual {
 width: 110px;
 text-align: left;
 left: 300px;
@@ -46,14 +45,14 @@ bottom: 146px;
 position: relative;
 }
 
-#courses {
+#CourseName {
 width: 450px;
 text-align: left;
 bottom: 192px;
 position: relative;
 }
 
-#Form_calcForm_courses{
+#Form_calcForm_CourseName{
   width: 437px;
 }
 
