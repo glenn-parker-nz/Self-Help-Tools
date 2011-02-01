@@ -13,7 +13,7 @@
 		$Content
 
 		$Form
-	
+		$calcForm
 	
 	<% if Menu(2) %>
 		</div>
