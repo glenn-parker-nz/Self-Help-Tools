@@ -1,15 +1,12 @@
 /* ------- Style Sheet for the Self Help Tools Pages ------- */	
 
 #Content{
-  
   padding-right:100px;
-  width: 360px;
+  width: 410px;
 }
 
 .wrapa{
-  
   width: 320px;
-  
 }
 
 
@@ -33,13 +30,13 @@ text-align: left;
   height: 50px;
 }
 
-.validationError {
- 
+#Form_CareerForm_Careers{
+  width: 130px;
 }
 
 .Actions #Form_CareerForm_action_SendCareerFormForm {
   
-left: 270px;  
+left: 320px;  
 bottom: 65px;
 text-align: right;
 position: relative;
