@@ -17,7 +17,6 @@ class StudentCareerPlanner_Controller extends StudyTool_Controller
       new DropdownField('Careers','I\'m interested in becoming a', $this->dbObject('chooseCareers')->enumValues())
       );
     
-    
       // Create action
       $actions = new FieldSet(
         new FormAction('SendCareerFormForm', 'Show me!')
