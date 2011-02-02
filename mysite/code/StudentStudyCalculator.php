@@ -20,6 +20,11 @@ class StudentStudyCalculator_Controller extends StudyTool_Controller {
 			$options[] = $subject;
 		}
 		return $options;
+		
+		
+		
+		//return DataObject::get("Subject")->map("ID", "Title");
+		
 	}
 	
 	private function getQualType() {

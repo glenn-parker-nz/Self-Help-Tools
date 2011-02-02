@@ -1,18 +1,24 @@
 /* ------- Style Sheet for the Self Help Tools Pages ------- */	
 
 #Content{
-  padding-right:100px;
-  width: 410px;
+  padding-right:10px;
+  width: 510px;
 }
 
 .wrapa{
-  width: 320px;
+  width: 400px;
+}
+
+.car label{
+  position: relative;
+  bottom: 93px;
+  left: 242px;
 }
 
 
 .left {
 margin: 0px; 
-width: 190px;
+width: 320px;
 float: left;
 bottom: -13px;
 position: relative;
@@ -25,13 +31,14 @@ text-align: left;
 
 .middleColumn {
   background-color: #ffffff;
-  margin-left: 175px;
+  margin-left: 95px;
   width: 200px;
   height: 50px;
+  position: relative;
 }
 
 #Form_CareerForm_Careers{
-  width: 130px;
+  width: 140px;
 }
 
 .Actions #Form_CareerForm_action_SendCareerFormForm {

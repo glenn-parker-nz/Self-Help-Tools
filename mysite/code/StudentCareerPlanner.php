@@ -1,20 +1,34 @@
 <?php
 class StudentCareerPlanner extends StudyTool
 {
-  static $db = array("chooseCareers" => "Enum('Plumber, Designer, Blogger,Teacher')");
-  
   //Define our form function as allowed
   static $allowed_actions = array('CareerForm');
 }
 
 class StudentCareerPlanner_Controller extends StudyTool_Controller 
 {
+      private function getName() {
+    $sql="SELECT DISTINCT \"Name\" FROM \"Subject\"";
+    $result=pg_query($sql);
+
+    $options = array();
+
+    while ($row=pg_fetch_array($result)) {
+
+      $name=$row["Name"];
+      //$options.="<OPTION VALUE=\"$subject\">";
+      $options[] = $name;
+    }
+    return $options;
+  }
+    
+  
   //The function which generates our form
   function CareerForm() 
   {
         // Create fields
       $fields = new FieldSet(
-      new DropdownField('Careers','I\'m interested in becoming a', $this->dbObject('chooseCareers')->enumValues())
+      new DropdownField('Name', 'I\'m interested in', $this->getName(), 'name')
       );
     
       // Create action
